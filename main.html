@@ -7,9 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Prueba de pagina htmlt</title>
     <style>
+        address{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: small;
+        }
         body{
-    background-color: hotpink;
+            background-color: hotpink;
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            position: relative;
 }
+
 .Container{
     display: flex;
     flex-direction: column;
@@ -22,7 +34,9 @@
 h1{
     margin-bottom: 20px;
     font-family: Arial, sans-serif;
+    font-style: italic;
 }
+
 
 .button-container{
     display: flex;
@@ -44,9 +58,11 @@ h1{
 .btn-secondary{
     background-color: red;
     color: black;
+    transition-duration: 0s;
 }
     </style>
 </head>
+<address class="info">IG FOR THE CREATOR: emmanuel.0.2</address>
 <body>
 <div class="Container">
     <h1>¿Quieres ser mi novia?❤️</h1>
@@ -56,6 +72,7 @@ h1{
     </div>
 </div>
 <script>
+
     let btnSi = document.getElementById("btnSi")
     let btnNo = document.getElementById("btnNo")
     let size = 15; // Tamaño base del boton Si
