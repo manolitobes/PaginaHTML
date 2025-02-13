@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prueba de pagina htmlt</title>
+    <style>
+        body{
+    background-color: hotpink;
+}
+.Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.button-container{
+    display: flex;
+    gap: 15px;
+}
+.btn{
+    font-size: 20px;
+    padding: 25px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary{
+    background-color: #21d021;
+    color: black;
+}
+.btn-secondary{
+    background-color: red;
+    color: black;
+}
+    </style>
+</head>
+<body>
+<div class="Container">
+    <h1>¿Quieres ser mi novia?❤️</h1>
+    <div class="button-container">
+        <button class="btn btn-primary" id="btnSi">Si</button>
+        <button class="btn btn-secondary" id="btnNo">No</button>
+    </div>
+</div>
+<script>
+    let btnSi = document.getElementById("btnSi")
+    let btnNo = document.getElementById("btnNo")
+    let size = 15; // Tamaño base del boton Si
+
+    btnNo.addEventListener("click", function (){
+        size += 300;// Aumenta en tamaño
+        btnSi.style.fontSize = size + "px";
+        btnSi.style.padding = (size / 2) + "px" + (size) + "px";
+    });
+
+    btnSi.addEventListener("click", function (){
+        alert("!Sabia que ibas a decir que si 😍")
+    });
+</script>
+</body>
+</html>
